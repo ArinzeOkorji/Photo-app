@@ -1,0 +1,54 @@
+@mixin for-lg {
+    @media screen and (min-width: 996px) {
+        @content;
+    }
+}
+
+.header {
+    height: max-content;
+    background-color: #DDE2E9;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+form {
+    display: flex;
+    background-color: #fff;
+    padding-left: 20px;
+    align-items: center;
+    border-radius: 8px;
+    width: 90%;
+    margin: 0 auto;
+    @include for-lg {
+        width: 76%;
+    }
+    i {
+        color: #BAC0CA;
+    }
+    input {
+        border: none;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        width: 100%;
+        padding: 25px 30px;
+        padding-top: 30px;
+        font-weight: 700;
+        font-size: 21px;
+        outline: none;
+        color: #5A6881;
+    }
+     ::placeholder {
+        color: #5A6881;
+        font-weight: 700;
+        font-size: 21px;
+    }
+}
+
+.searchResult {
+    color: #273A59;
+    font-weight: 700;
+    font-size: 30px;
+    span {
+        color: #6D7B91;
+    }
+}
