@@ -13,6 +13,9 @@ export class PhotoCollectionComponent implements OnInit {
   Response;
   modalImage: object;
   modal = false;
+  imageUrl: any;
+  imageUserName: any;
+  imageUserLocation: any;
 
 
   constructor( public ps: PhotoAppService) {}
@@ -24,11 +27,15 @@ export class PhotoCollectionComponent implements OnInit {
     console.log(this.ps.Response);
 
   });
-   //console.log(Response);
+   // console.log(Response);
   }
 
-  showModal(image) {
+  showModal(image: Object) {
+    console.log(image);
     this.modalImage = image;
+    this.imageUrl = this.modalImage['urls']['regular'];
+    this.imageUserName = this.modalImage['user']['name'];
+    this.imageUserLocation = this.modalImage['user']['location'];
     this.modal = !this.modal;
   }
 
