@@ -15,7 +15,7 @@ export class PhotoCollectionComponent implements OnInit {
   modal = false;
 
 
-  constructor( private ps: PhotoAppService) {}
+  constructor( public ps: PhotoAppService) {}
 
   ngOnInit() {
    this.ps.callApi()

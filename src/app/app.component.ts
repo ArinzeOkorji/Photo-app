@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'PhotoApp';
   searchResult = false;
 
-  constructor(private ps: PhotoAppService) {
+  constructor(public ps: PhotoAppService) {
 
   }
 
